@@ -1,6 +1,6 @@
 default_dir="ptcomdev"
 args=("$@")
-hostname = "ptcomdev"
+hostname="ptcomdev"
 dir=""
 user=""
 
@@ -23,5 +23,5 @@ fi
 #
 if [ -d ${dir} ]; then
   sshfs ${hostname}:/home/${user} ~/${dir} -o auto_cache -o follow_symlinks -o volname=${dir}
-  echo ${dir} "<- and mounted!"
+  echo ${dir} "<- mounted!"
 fi
